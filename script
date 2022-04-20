@@ -14,7 +14,7 @@ if (Test-Path $fileConfig -PathType leaf) {
     foreach ($launch in $xml.parameters.launch) {
         if($launch.argument -eq "/AUTO")
         {
-            $PrintedEcho += ($launch.days.split(','))[0] + " a " + $launch.startTime + " -- last access : " + $launch.lastaccessed + " a " + $launch.lasttimeaccessed + "`n`r"
+            $PrintedEcho += $launch.schedule + " " + $launch.days + " a " + $launch.startTime + " -- last access : " + $launch.lastaccessed + " a " + $launch.lasttimeaccessed + "`n`r"
             $i++
         }
     }
