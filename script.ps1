@@ -8,7 +8,7 @@ $PrintedEcho = ""
 if (Test-Path $fileConfig -PathType leaf) {
     $xml = [xml](Get-Content $fileConfig)
 
-    $PrintedEcho += "Down Days : `r`n"
+    $PrintedEcho += "scheduling updates : `r`n"
     $i = 0
 
     foreach ($launch in $xml.parameters.launch) {
